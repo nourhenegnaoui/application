@@ -1,0 +1,29 @@
+<div class="background">
+  <div class="container" style="padding-top:100px">
+      <form [formGroup]="loginForm" class="Form">
+          <div >
+              <div class="col-md-4 r">
+                
+                  <h1 style="padding-left: 105px ;padding-bottom:15px">Connexion</h1>
+                  
+                  <div style="padding-left: 105px" >
+                  <label for="Email" >Email</label>
+                  <input  type="text"  formControlName="userName" class="form-control" id="username"  style="width: 200px">
+                </div>
+                <br>
+                <div style="padding-left:105px">  
+                  <label for="password"style="width: 200px" >Mot De Passe</label>
+                  <input type="password" (focus)="clearPass()"  formControlName="password" class="form-control" id="password" style="width: 200px">
+                </div>
+                  <br>
+                  <div style="padding-left: 95px " >
+                  <button class="btn btn-lg btn-primary btn-block w3-center" style=" background-color: #02588f; color: white; width:225px ; height:45px" (click)="login()" type="submit">Se Connecter</button>
+              
+                </div>
+            </div>
+              
+
+          </div>
+      </form>
+  </div>
+</div>

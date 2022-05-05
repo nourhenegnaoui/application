@@ -1,0 +1,28 @@
+<html class="background">
+    <div  style="margin-left:80px; padding-top:60px">
+  <body class="Form" style="margin-bottom: 80px;">
+<h2 >Les Détails </h2> 
+<br>
+<div *ngIf="ticket" >
+  <div>
+    <label><b>Nom: </b></label> {{ticket.firstName}}
+  </div>
+  <div>
+    <label><b>Prenom: </b></label> {{ticket.lastName}}
+  </div> 
+  <div>
+    <label><b>Date: </b></label> {{ticket.date}}
+  </div>
+  <div>
+    <label><b>Destination: </b></label> {{ticket.destination}}
+  </div>    
+ 
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary" style="background-color: #02588f;">Retour à Mes Tickets</button><br>
+
+</body>
+</div>
+</html>

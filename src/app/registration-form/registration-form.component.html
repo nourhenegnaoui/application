@@ -1,0 +1,109 @@
+<!-- <html> -->
+    <div class="background">
+
+  
+<div class="container" >
+  <div class="row">
+      <div class="col-md-2" style="margin-left:258px; margin-top:70px">
+          <!-- <h3>Registration</h3> -->
+      </div>
+      <!-- *ngIf="submitted" -->
+      <div class="col-md-4">
+          <div class="alert alert-danger" *ngIf="registrationForm.controls['mobileNumber'].errors  && submitted">
+              <div *ngIf="registrationForm.controls['mobileNumber'].errors.required">Important</div>
+        
+          </div>
+          <div class="alert alert-danger" *ngIf="registrationForm.controls['firstName'].errors && submitted">
+              <div *ngIf="registrationForm.controls['firstName'].errors.required">Important</div>
+          </div>
+          <div class="alert alert-danger" *ngIf="registrationForm.controls['lastName'].errors  && submitted">
+              <div *ngIf="registrationForm.controls['lastName'].errors.required">Important</div>
+          </div>
+          <div class="alert alert-danger" *ngIf="registrationForm.controls['email'].errors  && submitted">
+              <div *ngIf="registrationForm.controls['email'].errors.required">Important</div>
+        
+          </div>
+      </div>
+  </div>
+  <form [formGroup]="registrationForm" class="Form" >
+        <h3 style=" padding-bottom: 15px">Inscrivez-Vous</h3>
+      <div class="row">
+         
+          <div class="col-md-6">
+                <label class="radio-inline" for="male" style="width:50%">
+                        <input id="male" type="radio" value="1" name="gender" formControlName="gender" checked> Homme
+                    </label>
+                    <label class="radio-inline" for="female" style="width:50%">
+                        <input id="male" type="radio" value="0" name="gender" formControlName="gender"> Femme
+                    </label>
+                    <div class="form-group">
+                            <input type="text" placeholder="Nom" class="form-control" id="first_name" formControlName="firstName" style="width: 212%">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" formControlName="lastName" placeholder="Prenom" class="form-control" id="last_name" style="width: 212%">
+                        </div>
+                        <table style="width: 212%">
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="form-control" id="month" formControlName="month">
+                                                <option value="month" disabled>Mois</option>
+                                                <option value="{{a}}" *ngFor="let a of month">{{a}}</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="form-control" id="day" placeholder="day" formControlName="day">
+                                                <option value="day" disabled>Jour</option>
+                                                <option value="{{a}}" *ngFor="let a of day">{{a}}</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="form-control" id="year" formControlName="year">
+                                                <option value="year" disabled>Année</option>
+                                                <option value="{{a}}" *ngFor="let a of year">{{a}}</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+              <div class="form-group">
+                  <input type="text" formControlName="mobileNumber" placeholder="Numero de tel" class="form-control"
+                      id="mobile_number" style="width: 212%">
+              </div>
+            
+             
+             
+              <div class="form-group">
+                  <input type="email" formControlName="email" placeholder="Email" class="form-control" id="email" style="width: 212%">
+              </div>
+              <button type="button" [disabled]="buttonRegister==false" (click)="register()" style=" background-color: #02588f; color: white; width:212%"
+                  class="btn ">Envoyer</button>
+          </div>
+          <div class="col-md-6">
+              <div *ngIf="visible==true">
+                  <app-login-form></app-login-form>
+              </div>
+          </div>
+      </div>
+  </form>
+</div>
+</div>
+<footer class="footer" style="background-color: #002D62; width:100%;
+ height: 40px;">
+<div class="socialmedia"> 
+    
+
+    <a href="#" class="fa fa-goo" style="margin-left: 15px;"></a>
+      <a href="#" class="fa fa-whatsapp" style="margin-left: 15px;"></a>
+    <a href="#" class="fa fa-facebook" style="margin-left: 15px;"></a>
+   <a href="#" class="fa fa-twitter"style="margin-left: 15px;"></a>
+   <a href="#" class="fa fa-linkedin"style="margin-left: 15px;"></a>
+   <a href="#" class="fa fa-instagram"style="margin-left: 15px;"></a>
+   
+  </div>
+    </footer>
+<!-- </html> -->
