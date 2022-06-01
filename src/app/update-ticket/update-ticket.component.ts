@@ -21,7 +21,7 @@ export class UpdateTicketComponent implements OnInit {
 
     this.id = this.route.snapshot.params['id'];
     
-    this.ticketService.getEmployee(this.id)
+    this.ticketService.getTicket(this.id)
       .subscribe(data => {
         console.log(data)
         this.ticket = data;

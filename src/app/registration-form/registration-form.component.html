@@ -37,10 +37,12 @@
                         <input id="male" type="radio" value="0" name="gender" formControlName="gender"> Femme
                     </label>
                     <div class="form-group">
-                            <input type="text" placeholder="Nom" class="form-control" id="first_name" formControlName="firstName" style="width: 212%">
+                            <input type="text" placeholder="Nom" class="form-control" id="first_name" 
+                            formControlName="firstName" style="width: 212%">
                         </div>
                         <div class="form-group">
-                            <input type="text" formControlName="lastName" placeholder="Prenom" class="form-control" id="last_name" style="width: 212%">
+                            <input type="text" formControlName="lastName" placeholder="Prenom" 
+                            class="form-control" id="last_name" style="width: 212%">
                         </div>
                         <table style="width: 212%">
                                 <tr>
@@ -78,9 +80,11 @@
              
              
               <div class="form-group">
-                  <input type="email" formControlName="email" placeholder="Email" class="form-control" id="email" style="width: 212%">
+                  <input type="email" formControlName="email" placeholder="Email" class="form-control" 
+                  id="email" style="width: 212%">
               </div>
-              <button type="button" [disabled]="buttonRegister==false" (click)="register()" style=" background-color: #02588f; color: white; width:212%"
+              <button type="button" [disabled]="buttonRegister==false" (click)="register()"
+               style=" background-color: #02588f; color: white; width:212%"
                   class="btn ">Envoyer</button>
           </div>
           <div class="col-md-6">

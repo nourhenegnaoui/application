@@ -20,7 +20,7 @@ export class CreateticketComponent implements OnInit {
   ngOnInit() {
   }
 
-  newEmployee(): void {
+  newTicket(): void {
     this.submitted = false;
     this.ticket = new ticket();
   }

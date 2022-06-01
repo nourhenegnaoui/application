@@ -13,7 +13,7 @@ export class ticketService {
 
   constructor(private http: HttpClient) { }
 
-  getEmployee(id: number): Observable<any> {
+  getTicket(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 

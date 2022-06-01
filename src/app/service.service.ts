@@ -18,7 +18,7 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getEmployee(id: number): Observable<any> {
+  getTicket(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
@@ -26,15 +26,15 @@ export class ServiceService {
     return this.http.post("https://localhost:8081/api/create", ticket);
   }
 
-  updateEmployee(id: number, value: any): Observable<Object> {
+  updateTicket(id: number, value: any): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
-  deleteEmployee(id: number): Observable<any> {
+  deleteTicket(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
 
-  getEmployeesList(): Observable<any> {
+  getTicketsList(): Observable<any> {
     return this.http.get('https://localhost:8081/api/getAll');
   } 
 }
